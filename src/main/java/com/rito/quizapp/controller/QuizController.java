@@ -1,14 +1,13 @@
-package com.telusko.quizapp.controller;
-
-import com.telusko.quizapp.model.Question;
-import com.telusko.quizapp.model.QuestionWrapper;
-import com.telusko.quizapp.model.Response;
-import com.telusko.quizapp.service.QuizService;
+package com.rito.quizapp.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+//import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.rito.quizapp.model.QuestionWrapper;
+import com.rito.quizapp.model.Response;
+import com.rito.quizapp.service.QuizService;
 
 import java.util.List;
 // controller for quiz

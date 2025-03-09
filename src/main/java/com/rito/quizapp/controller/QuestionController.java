@@ -1,11 +1,12 @@
-package com.telusko.quizapp.controller;
+package com.rito.quizapp.controller;
 
 
-import com.telusko.quizapp.model.Question;
-import com.telusko.quizapp.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.rito.quizapp.model.Question;
+import com.rito.quizapp.service.QuestionService;
 
 import java.util.List;
 

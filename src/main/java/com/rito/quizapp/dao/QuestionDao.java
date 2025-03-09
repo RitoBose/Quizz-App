@@ -1,9 +1,10 @@
-package com.telusko.quizapp.dao;
+package com.rito.quizapp.dao;
 
-import com.telusko.quizapp.model.Question;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+
+import com.rito.quizapp.model.Question;
 
 import java.util.List;
 
@@ -12,6 +13,6 @@ public interface QuestionDao extends JpaRepository<Question, Integer> {
 
     List<Question> findByCategory(String category);
 
-    @Query(value = "SELECT * FROM question q Where q.category=:category ORDER BY RANDOM() LIMIT :numQ", nativeQuery = true)
+    @Query(value = "SELECT * FROM question q Where q.category=?1 ORDER BY RANDOM() ?2", nativeQuery = true)
     List<Question> findRandomQuestionsByCategory(String category, int numQ);
 }
